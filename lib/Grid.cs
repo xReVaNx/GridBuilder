@@ -13,7 +13,7 @@ namespace GridBuilder.lib
         {
             return this;
         }
-        public GridBuilder<T> Columns(Columns<T> columns)
+        public GridBuilder<T> Columns(Action<Columns<T>> columns)
         {
             return this;
         }
@@ -28,11 +28,15 @@ namespace GridBuilder.lib
     }
     public class Columns<T>
     {
-        public Columns<T> Bound(Action<T> param)
+        public Columns<T> Bound(Func<T, string> param)
         {
             return this;
         }
-        public Columns<T> Height(int px)
+        public Columns<T> Bound(Func<T, int> param)
+        {
+            return this;
+        }
+        public Columns<T> Height(string px)
         {
             return this;
         }

@@ -41,7 +41,7 @@ namespace GridBuilder.Controllers
             grid.Name("grid")
                 .Columns(columns =>
                 {
-                    columns.Bound(p => p.Firstname);
+                    columns.Bound(p => p.Firstname).Height("30px");
                     columns.Bound(p => p.Lastname);
                     columns.Bound(p => p.Company);
                     columns.Bound(p => p.ExperienceInYears);
